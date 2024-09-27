@@ -6,9 +6,10 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /*
- * CS 5704 (Spring 2023) boundedstack2.0
+ * CS 5704 (Spring 2023) Assignment 0
  *
  * @author Shannon Smith (shae1223)
+ * @version 2023.01.25
  */
 
 @SuppressWarnings("EqualsWithItself")
