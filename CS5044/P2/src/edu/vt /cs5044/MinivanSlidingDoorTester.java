@@ -355,7 +355,7 @@ public class MinivanSlidingDoorTester {
 
         System.out.println("-----------------------------------------------------------------------------------------" );
         System.out.println("                    DASHBOARD BUTTON WITH CHILDSAFE & GEAR ENGAGED                       " );
-        System.out.println("-----------------------------------------------------------------------------------------" );
+        System.out.println("-----------------------------------------------------------------------------------------" ); 
         System.out.println("                                       Test 24:                                          " );
         System.out.println("    SETUP: [Door is open, Door is unlocked, ChildSafe is disengaged, Gear is NEUTRAL]    " );
         System.out.println("                   ------> Door Opened by Dashboard Button <------                       " );
@@ -447,7 +447,7 @@ public class MinivanSlidingDoorTester {
 
         System.out.println("-----------------------------------------------------------------------------------------" );
         System.out.println("                     OUTSIDE HANDLE WITH CHILDSAFE & GEAR ENGAGED                        " );
-        System.out.println("-----------------------------------------------------------------------------------------" );
+        System.out.println("-----------------------------------------------------------------------------------------" ); 
         System.out.println("                                       Test 29:                                          " );
         System.out.println("     SETUP: [Door is closed, Door is locked, ChildSafe is engaged, Gear is NEUTRAL]      " );
         System.out.println("              ------> Door Opened by Outside Handle, then Closed <------                 " );
@@ -619,7 +619,7 @@ public class MinivanSlidingDoorTester {
         result = door.pushUnlockButton();
         result = door.pushOutsideHandle(Direction.OPEN);
         result = door.setChildSafe(true);
-
+        
         System.out.println("-----------------------------------------------------------------------------------------" );
         System.out.println("                                       Test 38:                                          " );
         System.out.println("       SETUP: [Door is open, Door is unlocked, ChildSafe is engaged, Gear is PARK]       " );
