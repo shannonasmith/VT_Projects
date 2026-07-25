@@ -82,7 +82,7 @@ public class RiverGUI extends JPanel implements MouseListener {
         g.fillRect(0, 0, this.getWidth(), this.getHeight());
 
         itemRecMap.forEach((item, rec) -> {
-            paintRectangle(g, Color.CYAN, engine.getItemLabel(item),rec);
+            paintRectangle(g, engine.getItemColor(item), engine.getItemLabel(item), rec);
         });
         g.setColor(Color.ORANGE);
         paintRectangle(boatRectangle, g);
@@ -100,7 +100,6 @@ public class RiverGUI extends JPanel implements MouseListener {
         if (restart) {
             paintRestartButton(g);
         }
-
 
     }
     private void updateItemRectangle(Item item) {
@@ -122,6 +121,7 @@ public class RiverGUI extends JPanel implements MouseListener {
         }
         itemRecMap.put(item, updatedRectangle);
     }
+
     private Rectangle getUpdatedShoreRectangle(int baseX, Item item){
         Rectangle result = new Rectangle(
                 baseX + dx[item.ordinal()],
@@ -130,9 +130,11 @@ public class RiverGUI extends JPanel implements MouseListener {
                 itemHeight);
         return result;
     }
+
     private int getAssignedSeat(Item item) {
         return engine.getItemsOnBoat().indexOf(item); // Add 1 to make it 1-based indexing
     }
+
     private void updateBoatRectangle(){
         switch (engine.getBoatLocation()) {
             case START:
@@ -184,26 +186,19 @@ public class RiverGUI extends JPanel implements MouseListener {
     public void paintBorder(Rectangle r, int thickness, Graphics g) {
         g.fillRect(r.x - thickness, r.y - thickness, r.width + (2 * thickness), r.height + (2 * thickness));
     }
+
     private void paintRectangle(Graphics g, Color color, String label, Rectangle rect) {
-        if(label.equals("F")){
-            g.setColor(Color.MAGENTA);
-            g.fillRect(rect.x, rect.y, rect.width, rect.height);
-        }
-        else {
-            g.setColor(color);
-            g.fillRect(rect.x, rect.y, rect.width, rect.height);
-            g.setColor(Color.BLACK);
-            int fontSize = (rect.height >= 40) ? 36 : 18;
-            g.setFont(new Font("Verdana", Font.BOLD, fontSize));
-            FontMetrics fm = g.getFontMetrics();
-            int strXCoord = rect.x + rect.width / 2 - fm.stringWidth(label) / 2;
-            int strYCoord = rect.y + rect.height / 2 + fontSize / 2 - 4;
-            g.drawString(label, strXCoord, strYCoord);
-        }
-
-
-
+        g.setColor(color);
+        g.fillRect(rect.x, rect.y, rect.width, rect.height);
+        g.setColor(Color.BLACK);
+        int fontSize = (rect.height >= 40) ? 36 : 18;
+        g.setFont(new Font("Verdana", Font.BOLD, fontSize));
+        FontMetrics fm = g.getFontMetrics();
+        int strXCoord = rect.x + rect.width / 2 - fm.stringWidth(label) / 2;
+        int strYCoord = rect.y + rect.height / 2 + fontSize / 2 - 4;
+        g.drawString(label, strXCoord, strYCoord);
     }
+
     public void paintRectangle(Rectangle r, Graphics g) {
         g.fillRect(r.x, r.y, r.width, r.height);
     }
