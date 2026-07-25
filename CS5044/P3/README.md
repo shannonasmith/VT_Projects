@@ -18,7 +18,9 @@ board quality metrics.
 
 - JDK 17+ (developed/tested with Java 17)
 - IntelliJ IDEA (Community Edition works fine)
-- JUnit 4 (added as a project library - see setup note below)
+- JUnit 4
+- `tetris5044.jar` - Tetris game engine framework (`AI`, `Board`, `Placement`,
+  `Rotation`, `Shape`)
 
 ## How to Run
 
@@ -30,8 +32,33 @@ board quality metrics.
    (Alt+Shift+Enter) - this pulls in the JUnit 4 library needed to run the tests
 6. If the `test` folder shows a "located outside of the module source root" warning,
    right-click the `test` folder → **Mark Directory as → Test Sources Root**
-7. In the Project panel: `test → edu.vt.cs5044 → TetrisAITest`
-8. Right-click `TetrisAITest` → **Run 'TetrisAITest'**
+7. If you see "Cannot resolve symbol" errors for `AI`, `Board`, `Placement`,
+   `Rotation`, or `Shape`, add `tetris5044.jar` as a project library:
+   - **File → Project Structure...** (Ctrl+Alt+Shift+S) → **Libraries** → **+** → **Java**
+   - Select `tetris5044.jar` (in the project root), click **OK**, confirm the
+     module checkbox, click **OK**, then **Apply** and **OK**
+   - Optional: repeat with `tetris5044-api.jar` for hover-documentation. When
+     prompted to "Choose Categories of Selected Files," select **JavaDocs**
+     (not Classes), since this jar contains documentation only, no compiled code
+8. In the Project panel: `test → edu.vt.cs5044 → TetrisAITest`
+9. Right-click `TetrisAITest` → **Run 'TetrisAITest'**
+
+### Playing the Game
+
+`tetris5044.jar` also includes a full playable Tetris game
+(`edu.vt.cs5044.tetris.Tetris5044`) that your AI can be plugged into. Since
+it's inside a jar rather than your own source, it needs a manual run
+configuration:
+
+1. **Run → Edit Configurations...**
+2. Click **+** → **Application**
+3. In **Main class**, type `Tetris5044` and select `edu.vt.cs5044.tetris.Tetris5044`
+4. Confirm the **Module** dropdown is set to this project, click **OK**
+5. Run it via the green ▶ button
+
+Once the game window opens: type **P** to start a game (A/D to move, W to
+rotate, S/spacebar to drop), **Ctrl-P** to toggle AI mode (hands control to
+`TetrisAI`), and **?** for the full control list in the console.
 
 ## Testing Approach
 
@@ -85,6 +112,8 @@ machine and want changes to sync both ways.
 - `.idea/` and `out/` folders are intentionally not included - these are
   IDE-specific/build files that regenerate automatically when you open the
   project fresh in IntelliJ.
-- The `AI`, `Board`, `Placement`, `Rotation`, and `Shape` classes/interfaces
-  were provided by the course as the Tetris framework; `TetrisAI.java` is the
-  implementation written for this assignment.
+- `tetris5044.jar` is a course-provided framework library containing the
+  `AI`, `Board`, `Placement`, `Rotation`, and `Shape` classes/interfaces, not
+  something written for this assignment - it's included in this repo so the
+  project runs without needing to track it down separately. `TetrisAI.java`
+  is the implementation written for this assignment.
