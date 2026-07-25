@@ -17,8 +17,8 @@ public class ArrayStackTest {
 
     @Before
     public void setUp() {
-        stack_empty_3 = new ListStack<>(3);
-        stack_ABC_6 = new ListStack<>(6);
+        stack_empty_3 = new ArrayStack<>(3);
+        stack_ABC_6 = new ArrayStack<>(6);
         stack_ABC_6.push("A"); // this = [A]:6 --> A at top of stack
         stack_ABC_6.push("B"); // this = [A, B]:6 --> B at top of stack, A at bottom
         stack_ABC_6.push("C"); // this = [A, B, C]:6 --> C at top of stack, B in middle, A at bottom
