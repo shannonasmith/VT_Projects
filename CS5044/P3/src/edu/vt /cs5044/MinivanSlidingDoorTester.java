@@ -36,7 +36,7 @@ public class MinivanSlidingDoorTester {
         System.out.println("              DOOR LOCKED:       Expected: false;            Actual: " + door.isLocked()   );
         System.out.println("              CHILDSAFE:         Expected: false;            Actual: " + door.isChildSafe());
         System.out.println("              GEAR:              Expected: PARK;             Actual: " + door.getGear()    );
-                result = door.setGear(Gear.REVERSE);
+        result = door.setGear(Gear.REVERSE);
         System.out.println("              ACTION:            Expected: GEAR_RELEASED;    Actual: " + result            );
         System.out.println("              GEAR:              Expected: REVERSE;          Actual: " + door.getGear()    );
         System.out.println();
@@ -613,7 +613,27 @@ public class MinivanSlidingDoorTester {
         System.out.println("              ACTION:            Expected: INVALID_PARAMETER; Actual: " + result           );
         System.out.println("              DOOR OPEN:         Expected: false;             Actual: " + door.isOpen()    );
         System.out.println();
-        System.out.println("-----------------------------------------------------------------------------------------" );
 
+        result = door.pushUnlockButton();
+        result = door.pushOutsideHandle(Direction.OPEN);
+        result = door.setChildSafe(true);
+        
+        System.out.println("-----------------------------------------------------------------------------------------" );
+        System.out.println("                                       Test 38:                                          " );
+        System.out.println("       SETUP: [Door is open, Door is unlocked, ChildSafe is engaged, Gear is PARK]       " );
+        System.out.println("          ------> Inside Handle Open refused by childSafe, then Closed <------           " );
+        System.out.println("-----------------------------------------------------------------------------------------" );
+        System.out.println("              DOOR OPEN:         Expected: true;              Actual: " + door.isOpen()    );
+        System.out.println("              DOOR LOCKED:       Expected: false;             Actual: " + door.isLocked()  );
+        System.out.println("              CHILDSAFE:         Expected: true;              Actual: " + door.isChildSafe());
+        System.out.println("              GEAR:              Expected: PARK;              Actual: " + door.getGear()   );
+        result = door.pushInsideHandle(Direction.OPEN);
+        System.out.println("              ACTION:            Expected: OPEN_REFUSED_CHILDSAFE; Actual: " + result      );
+        System.out.println("              DOOR OPEN:         Expected: true;              Actual: " + door.isOpen()    );
+        result = door.pushInsideHandle(Direction.CLOSE);
+        System.out.println("              ACTION:            Expected: DOOR_CLOSED;       Actual: " + result           );
+        System.out.println("              DOOR OPEN:         Expected: false;             Actual: " + door.isOpen()    );
+        System.out.println();
+        System.out.println("-----------------------------------------------------------------------------------------" );
     }
 }
