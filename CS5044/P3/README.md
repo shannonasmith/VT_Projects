@@ -33,6 +33,24 @@ board quality metrics.
 7. In the Project panel: `test → edu.vt.cs5044 → TetrisAITest`
 8. Right-click `TetrisAITest` → **Run 'TetrisAITest'**
 
+## Testing Approach
+
+The assignment required at least 5 distinct, reasonably complex test boards
+shared across the cost-method assertions, plus a separate set of boards for
+`findBestPlacement`, in addition to simpler edge-case boards (empty, nearly
+empty) that don't count toward that minimum. The test suite meets this with
+5 custom boards (`shaesBoard1`-`shaesBoard5`) used across `testACH`, `testCHR`,
+`testCHV`, and `testTGC`, plus a full set of per-shape boards (`testBoardI`
+through `testBoardZ`) and simple edge cases (`emptyBoard`, `oneBlockColumn`)
+used in `testBP`.
+
+The weighting in `findBestPlacement` (4x Average Column Height, 0x Column
+Height Range, 4x Column Height Variance, 12x Total Gap Count) was tuned within
+the assignment's specified range of 0, 4, 8, or 12 per factor, determined by
+observing AI performance across the game's built-in TEST sequences rather
+than through unit tests (since placement quality isn't something a single
+assertion can capture).
+
 ## Expected Output
 
 All 5 test methods should pass: `testBP` (best placement across all 7 piece
