@@ -101,7 +101,7 @@ public class ArrayStack<E> extends boundedstack.AbstractStack<E> {
 
         @Override
         public boolean hasNext() {
-            return currentIndex < contents.length;
+            return currentIndex < depth();
         }
 
         @Override
