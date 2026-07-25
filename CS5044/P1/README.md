@@ -34,6 +34,15 @@ The P1 Tester should report matching Expected/Actual values for Loc, #Pass,
 %Charge, U/T, and #Trips across all sample test case parts, ending with
 `Process finished with exit code 0`.
 
+## Testing Approach
+
+The assignment required exercising each method (including the constructor)
+at least three times, beyond the sample tester provided. The tester covers
+six distinct scenarios, each exercising the constructor, multiple `travelTo`
+calls (including the short-limit/long-rate override variant), passenger
+loading, recharging, and all three reporting methods across varied trip
+sequences.
+
 ## Setting This Up on Another PC
 
 **Option 1: Download only (no git required)**
@@ -62,6 +71,3 @@ machine and want changes to sync both ways.
 - `.idea/` and `out/` folders are intentionally not included - these are
   IDE-specific/build files that regenerate automatically when you open the
   project fresh in IntelliJ.
-  twice. The fix delegates cleanly to `travelHelper()`, matching the pattern
-  already used by the overloaded `travelTo(destination, shortLimitOverride,
-  longRateOverride)` method.
