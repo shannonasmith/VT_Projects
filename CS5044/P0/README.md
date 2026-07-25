@@ -1,6 +1,8 @@
 # P0 - Hello5044 (CS 5044)
 
-Simple intro project from CS 5044 - a "Hello World" starter assignment.
+Simple intro project from CS 5044 - a "Hello World" style starter assignment
+that outputs a small ASCII art block spelling out the course number, instead
+of a traditional one-line greeting.
 
 ## Requirements
 
@@ -13,13 +15,18 @@ Simple intro project from CS 5044 - a "Hello World" starter assignment.
 2. **File → Open**, select this project's folder (the one containing `src/`)
 3. Click **Trust Project** if prompted
 4. Let IntelliJ finish indexing (progress bar at the bottom)
-5. In the Project panel: `src → edu.vt.cs5044 → Main`
-6. Right-click `Main` → **Run 'Main.main()'**
+5. In the Project panel: `src → edu.vt.cs5044 → Hello5044`
+6. Right-click `Hello5044` → **Run 'Hello5044.main()'**
 
 ## Expected Output
 
 ```
-Hello world!
+ CCCC    SSSS     555555   0000   44  44  44  44
+CC  CC  SS  SS    55      00  00  44  44  44  44
+CC       SS       55555   00  00  44  44  44  44
+CC         SS         55  00  00  444444  444444
+CC  CC  SS  SS    55  55  00  00      44      44
+ CCCC    SSSS      5555    0000       44      44
 ```
 
 ## Setting This Up on Another PC
