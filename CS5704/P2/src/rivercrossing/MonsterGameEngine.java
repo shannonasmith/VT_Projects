@@ -18,12 +18,12 @@ public class MonsterGameEngine extends AbstractGameEngine {
     public static final Item MUNCHKIN_3 = Item.ITEM_5;
 
     public MonsterGameEngine() {
-        gameObjects.put(Item.ITEM_0, new GameObject("M1", Location.START, Color.CYAN, true));
-        gameObjects.put(Item.ITEM_2, new GameObject("M2", Location.START, Color.CYAN, true));
-        gameObjects.put(Item.ITEM_4, new GameObject("M3", Location.START, Color.CYAN, true));
-        gameObjects.put(Item.ITEM_1, new GameObject("K1", Location.START, Color.CYAN, true));
-        gameObjects.put(Item.ITEM_3, new GameObject("K2", Location.START, Color.CYAN, true));
-        gameObjects.put(Item.ITEM_5, new GameObject("K3", Location.START, Color.CYAN, true));
+        gameObjects.put(Item.ITEM_0, new GameObject("M1", Location.START, Color.GREEN, true));
+        gameObjects.put(Item.ITEM_2, new GameObject("M2", Location.START, Color.GREEN, true));
+        gameObjects.put(Item.ITEM_4, new GameObject("M3", Location.START, Color.GREEN, true));
+        gameObjects.put(Item.ITEM_1, new GameObject("K1", Location.START, Color.BLUE, true));
+        gameObjects.put(Item.ITEM_3, new GameObject("K2", Location.START, Color.BLUE, true));
+        gameObjects.put(Item.ITEM_5, new GameObject("K3", Location.START, Color.BLUE, true));
 
         boatLocation = Location.START;
     }
