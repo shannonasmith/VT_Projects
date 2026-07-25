@@ -22,6 +22,29 @@ Simple intro project from CS 5044 - a "Hello World" starter assignment.
 Hello world!
 ```
 
+## Setting This Up on Another PC
+
+**Option 1: Download only (no git required)**
+1. On GitHub, go to this repo -> green **Code** button -> **Download ZIP**
+2. Unzip it wherever you want
+3. Open the folder in IntelliJ (`File -> Open`) and follow "How to Run" above
+4. Note: changes made this way don't sync back to GitHub automatically -
+   you'd need to manually re-upload any changed files
+
+**Option 2: Git clone (two-way sync)**
+1. Install Git: https://git-scm.com/downloads
+2. Open a terminal and run:
+   ```
+   git clone https://github.com/yourusername/your-repo.git
+   ```
+3. Open the cloned folder in IntelliJ and follow "How to Run" above
+4. To pull future updates: `git pull`
+5. To push changes back: `git add .`, `git commit -m "message"`, `git push`
+
+Option 1 is simplest if you're just running/reviewing the project elsewhere.
+Option 2 is worth it if you'll be actively editing code from more than one
+machine and want changes to sync both ways.
+
 ## Notes
 
 - `.idea/` and `out/` folders are intentionally not included - these are
