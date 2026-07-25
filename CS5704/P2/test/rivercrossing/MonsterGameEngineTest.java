@@ -30,8 +30,9 @@ public class MonsterGameEngineTest {
         6. Row back 1 Monster and 1 Munchkin
         7. Row 2 Munchkins
         8. Row 1 Monster backs and row all the monsters
-    BOOM!
+        BOOM!
      */
+
     @Test
     public void testObjectCallThroughs() {
         Assert.assertEquals("M1", engine.getItemLabel(MONSTER_0));
@@ -82,49 +83,93 @@ public class MonsterGameEngineTest {
     public void testWinningGame() {
         MonsterGameEngine engine = new MonsterGameEngine();
 
-        // transport the goose
-        engine.loadBoat(MUNCHKIN_1);
-        engine.loadBoat(MONSTER_4);
+        // Move 1: two monsters cross
+        engine.loadBoat(MONSTER_0);
+        engine.loadBoat(MONSTER_2);
         engine.rowBoat();
-        engine.unloadBoat(MONSTER_4);
+        engine.unloadBoat(MONSTER_0);
+        engine.unloadBoat(MONSTER_2);
         Assert.assertFalse(engine.gameIsLost());
         Assert.assertFalse(engine.gameIsWon());
 
-        // go back alone
-        engine.rowBoat();
-        Assert.assertFalse(engine.gameIsLost());
-        Assert.assertFalse(engine.gameIsWon());
-
-        // transport the Beans
+        // Move 2: one monster returns
         engine.loadBoat(MONSTER_0);
         engine.rowBoat();
         engine.unloadBoat(MONSTER_0);
         Assert.assertFalse(engine.gameIsLost());
         Assert.assertFalse(engine.gameIsWon());
 
-        // go back with Goose
-        engine.loadBoat(MUNCHKIN_1);
+        // Move 3: two monsters cross
+        engine.loadBoat(MONSTER_0);
+        engine.loadBoat(MONSTER_4);
         engine.rowBoat();
-        engine.unloadBoat(MUNCHKIN_1);
+        engine.unloadBoat(MONSTER_0);
+        engine.unloadBoat(MONSTER_4);
         Assert.assertFalse(engine.gameIsLost());
         Assert.assertFalse(engine.gameIsWon());
 
-        // transport the Wolf
+        // Move 4: one monster returns
         engine.loadBoat(MONSTER_2);
         engine.rowBoat();
         engine.unloadBoat(MONSTER_2);
         Assert.assertFalse(engine.gameIsLost());
         Assert.assertFalse(engine.gameIsWon());
 
-        // go back alone
+        // Move 5: two munchkins cross
+        engine.loadBoat(MUNCHKIN_1);
+        engine.loadBoat(MUNCHKIN_3);
         engine.rowBoat();
+        engine.unloadBoat(MUNCHKIN_1);
+        engine.unloadBoat(MUNCHKIN_3);
         Assert.assertFalse(engine.gameIsLost());
         Assert.assertFalse(engine.gameIsWon());
 
-        // transport the Goose again
+        // Move 6: one monster and one munchkin return
+        engine.loadBoat(MONSTER_4);
         engine.loadBoat(MUNCHKIN_1);
         engine.rowBoat();
+        engine.unloadBoat(MONSTER_4);
         engine.unloadBoat(MUNCHKIN_1);
+        Assert.assertFalse(engine.gameIsLost());
+        Assert.assertFalse(engine.gameIsWon());
+
+        // Move 7: two munchkins cross
+        engine.loadBoat(MUNCHKIN_1);
+        engine.loadBoat(MUNCHKIN_5);
+        engine.rowBoat();
+        engine.unloadBoat(MUNCHKIN_1);
+        engine.unloadBoat(MUNCHKIN_5);
+        Assert.assertFalse(engine.gameIsLost());
+        Assert.assertFalse(engine.gameIsWon());
+
+        // Move 8: one monster returns
+        engine.loadBoat(MONSTER_0);
+        engine.rowBoat();
+        engine.unloadBoat(MONSTER_0);
+        Assert.assertFalse(engine.gameIsLost());
+        Assert.assertFalse(engine.gameIsWon());
+
+        // Move 9: two monsters cross
+        engine.loadBoat(MONSTER_0);
+        engine.loadBoat(MONSTER_2);
+        engine.rowBoat();
+        engine.unloadBoat(MONSTER_0);
+        engine.unloadBoat(MONSTER_2);
+        Assert.assertFalse(engine.gameIsLost());
+        Assert.assertFalse(engine.gameIsWon());
+
+        // Move 10: one monster returns
+        engine.loadBoat(MONSTER_0);
+        engine.rowBoat();
+        engine.unloadBoat(MONSTER_0);
+        Assert.assertFalse(engine.gameIsLost());
+        Assert.assertFalse(engine.gameIsWon());
+
+        // Move 11: final two monsters cross - game won
+        engine.loadBoat(MONSTER_0);
+        engine.loadBoat(MONSTER_4);
+        engine.rowBoat();
+        engine.unloadBoat(MONSTER_0);
         engine.unloadBoat(MONSTER_4);
         Assert.assertFalse(engine.gameIsLost());
         Assert.assertTrue(engine.gameIsWon());
@@ -132,30 +177,31 @@ public class MonsterGameEngineTest {
 
     @Test
     public void testLosingGame() {
-
         MonsterGameEngine engine = new MonsterGameEngine();
 
-        // transport the goose
-        engine.loadBoat(MUNCHKIN_1);
-        engine.rowBoat();
-        engine.unloadBoat(MUNCHKIN_1);
-        Assert.assertFalse(engine.gameIsLost());
-        Assert.assertFalse(engine.gameIsWon());
-
-        // go back alone
-        engine.rowBoat();
-        Assert.assertFalse(engine.gameIsLost());
-        Assert.assertFalse(engine.gameIsWon());
-
-        // transport the wolf
+        // Move 1: two monsters cross (valid)
+        engine.loadBoat(MONSTER_0);
         engine.loadBoat(MONSTER_2);
         engine.rowBoat();
+        engine.unloadBoat(MONSTER_0);
         engine.unloadBoat(MONSTER_2);
         Assert.assertFalse(engine.gameIsLost());
         Assert.assertFalse(engine.gameIsWon());
 
-        // go back alone
+        // Move 2: one monster returns (valid)
+        engine.loadBoat(MONSTER_0);
         engine.rowBoat();
+        engine.unloadBoat(MONSTER_0);
+        Assert.assertFalse(engine.gameIsLost());
+        Assert.assertFalse(engine.gameIsWon());
+
+        // Move 3: mistake - sending both remaining munchkins across at once,
+        // leaving 2 monsters and only 1 munchkin at START
+        engine.loadBoat(MUNCHKIN_1);
+        engine.loadBoat(MUNCHKIN_3);
+        engine.rowBoat();
+        engine.unloadBoat(MUNCHKIN_1);
+        engine.unloadBoat(MUNCHKIN_3);
         Assert.assertTrue(engine.gameIsLost());
         Assert.assertFalse(engine.gameIsWon());
     }
@@ -174,18 +220,15 @@ public class MonsterGameEngineTest {
         engine.rowBoat();
         engine.unloadBoat(MONSTER_2);
 
-
         // transport the goose
         engine.loadBoat(MUNCHKIN_1);
         engine.rowBoat();
         engine.unloadBoat(MUNCHKIN_1);
 
-
         // transport the Beans
         engine.loadBoat(MONSTER_0);
         engine.rowBoat();
         engine.unloadBoat(MONSTER_0);
-
 
         // go back alone
         engine.rowBoat();
@@ -212,8 +255,8 @@ public class MonsterGameEngineTest {
         Location topLoc = engine.getItemLocation(MONSTER_2);
         Location playerLoc = engine.getItemLocation(MONSTER_4);
 
-        // This action should do nothing since the wolf is not on the same shore as the
-        // boat
+        // This action should do nothing since the wolf is not on the same shore 
+        // as the boat
         engine.loadBoat(MONSTER_2);
 
         // check that the state has not changed
