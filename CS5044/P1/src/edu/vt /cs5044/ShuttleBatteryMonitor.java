@@ -51,17 +51,6 @@ public class ShuttleBatteryMonitor {
      * @param destination block number for the end of this trip
      */
     public void travelTo(int destination) {
-        int distance = Math.abs(destination - location);
-        int shortDistance = Math.min(distance, shortLimit);
-        int longDistance = (distance - shortDistance);
-        int shortEnergy = (shortDistance * (shortRate * passengerCount));
-        int longEnergy = (longDistance * (longRate * passengerCount));
-        int energyUsedThisTrip = (shortEnergy + longEnergy);
-        totalEnergyUsed = totalEnergyUsed + energyUsedThisTrip;
-        currentBatteryCharge -= energyUsedThisTrip;
-        totalNumberOfTrips += 1;
-        location = destination;
-
         travelHelper(destination, shortLimit, longRate);
     }
 
