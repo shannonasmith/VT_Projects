@@ -34,35 +34,35 @@ public class MonsterGameEngineTest {
      */
     @Test
     public void testObjectCallThroughs() {
-        Assert.assertEquals("MO", engine.getItemLabel(MONSTER_0));
+        Assert.assertEquals("M1", engine.getItemLabel(MONSTER_0));
         Assert.assertEquals(Location.START, engine.getItemLocation(MONSTER_0));
         Assert.assertEquals(Color.GREEN, engine.getItemColor(MONSTER_0));
-        Assert.assertEquals(Boolean.FALSE, engine.getItemIsDriver(MONSTER_0));
+        Assert.assertEquals(Boolean.TRUE, engine.getItemIsDriver(MONSTER_0));
 
-        Assert.assertEquals("MK", engine.getItemLabel(MUNCHKIN_1));
+        Assert.assertEquals("K1", engine.getItemLabel(MUNCHKIN_1));
         Assert.assertEquals(Location.START, engine.getItemLocation(MUNCHKIN_1));
         Assert.assertEquals(Color.BLUE, engine.getItemColor(MUNCHKIN_1));
-        Assert.assertEquals(Boolean.FALSE, engine.getItemIsDriver(MUNCHKIN_1));
+        Assert.assertEquals(Boolean.TRUE, engine.getItemIsDriver(MUNCHKIN_1));
 
-        Assert.assertEquals("MO", engine.getItemLabel(MONSTER_2));
+        Assert.assertEquals("M2", engine.getItemLabel(MONSTER_2));
         Assert.assertEquals(Location.START, engine.getItemLocation(MONSTER_2));
         Assert.assertEquals(Color.GREEN, engine.getItemColor(MONSTER_2));
-        Assert.assertEquals(Boolean.FALSE, engine.getItemIsDriver(MONSTER_2));
+        Assert.assertEquals(Boolean.TRUE, engine.getItemIsDriver(MONSTER_2));
 
-        Assert.assertEquals("MK", engine.getItemLabel(MUNCHKIN_3));
+        Assert.assertEquals("K2", engine.getItemLabel(MUNCHKIN_3));
         Assert.assertEquals(Location.START, engine.getItemLocation(MUNCHKIN_3));
         Assert.assertEquals(Color.BLUE, engine.getItemColor(MUNCHKIN_3));
-        Assert.assertEquals(Boolean.FALSE, engine.getItemIsDriver(MUNCHKIN_3));
+        Assert.assertEquals(Boolean.TRUE, engine.getItemIsDriver(MUNCHKIN_3));
 
-        Assert.assertEquals("MO", engine.getItemLabel(MONSTER_4));
+        Assert.assertEquals("M3", engine.getItemLabel(MONSTER_4));
         Assert.assertEquals(Location.START, engine.getItemLocation(MONSTER_4));
         Assert.assertEquals(Color.GREEN, engine.getItemColor(MONSTER_4));
         Assert.assertEquals(Boolean.TRUE, engine.getItemIsDriver(MONSTER_4));
 
-        Assert.assertEquals("MK", engine.getItemLabel(MUNCHKIN_5));
+        Assert.assertEquals("K3", engine.getItemLabel(MUNCHKIN_5));
         Assert.assertEquals(Location.START, engine.getItemLocation(MUNCHKIN_5));
         Assert.assertEquals(Color.BLUE, engine.getItemColor(MUNCHKIN_5));
-        Assert.assertEquals(Boolean.FALSE, engine.getItemIsDriver(MUNCHKIN_5));
+        Assert.assertEquals(Boolean.TRUE, engine.getItemIsDriver(MUNCHKIN_5));
     }
 
     @Test
@@ -80,7 +80,6 @@ public class MonsterGameEngineTest {
 
     @Test
     public void testWinningGame() {
-
         MonsterGameEngine engine = new MonsterGameEngine();
 
         // transport the goose
@@ -129,7 +128,6 @@ public class MonsterGameEngineTest {
         engine.unloadBoat(MONSTER_4);
         Assert.assertFalse(engine.gameIsLost());
         Assert.assertTrue(engine.gameIsWon());
-
     }
 
     @Test
@@ -160,7 +158,6 @@ public class MonsterGameEngineTest {
         engine.rowBoat();
         Assert.assertTrue(engine.gameIsLost());
         Assert.assertFalse(engine.gameIsWon());
-
     }
 
     // *************************** helper method *************************** //
@@ -194,7 +191,6 @@ public class MonsterGameEngineTest {
         engine.rowBoat();
         Assert.assertFalse(engine.gameIsLost());
         Assert.assertFalse(engine.gameIsWon());
-
     }
 
     @Test
@@ -202,8 +198,9 @@ public class MonsterGameEngineTest {
 
         MonsterGameEngine engine = new MonsterGameEngine();
 
-        // transport the goose
+        // transport the munchkin and a monster together (valid opening move)
         engine.loadBoat(MUNCHKIN_1);
+        engine.loadBoat(MONSTER_4);
         engine.rowBoat();
         engine.unloadBoat(MUNCHKIN_1);
         Assert.assertFalse(engine.gameIsLost());
@@ -225,6 +222,5 @@ public class MonsterGameEngineTest {
         Assert.assertEquals(topLoc, engine.getItemLocation(MONSTER_2));
         Assert.assertEquals(playerLoc, engine.getItemLocation(MONSTER_4));
     }
-
 
 }
