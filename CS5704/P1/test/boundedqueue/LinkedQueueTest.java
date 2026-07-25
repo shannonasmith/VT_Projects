@@ -273,7 +273,7 @@ public class LinkedQueueTest {
         }
         assertEquals(3, linked_empty3.length());
         assertEquals(3, linked_empty3.capacity());
-        assertEquals("AAA", empty3_result.toString());
+        assertEquals("ABC", empty3_result.toString());
 
         StringBuilder abc6_result = new StringBuilder();
         for (String s : linked_ABC6) {
@@ -390,7 +390,7 @@ public class LinkedQueueTest {
 
     @Test
     public void testABC6ToString() {
-        assertEquals("[A, A, A]:6", linked_ABC6.toString());
+        assertEquals("[A, B, C]:6", linked_ABC6.toString());
     }
 
     @Test
