@@ -86,7 +86,7 @@ public class MonsterGameEngineTest {
         engine.loadBoat(MUNCHKIN_1);
         engine.loadBoat(MONSTER_4);
         engine.rowBoat();
-        engine.unloadBoat(MUNCHKIN_1);
+        engine.unloadBoat(MONSTER_4);
         Assert.assertFalse(engine.gameIsLost());
         Assert.assertFalse(engine.gameIsWon());
 
