@@ -651,7 +651,7 @@ public class CircArrayQueueTest {
         linked_ABC6.enqueue("A");
         linked_ABC6.enqueue("B");
         linked_ABC6.enqueue("C");
-        assertNotEquals(array_ABC6.hashCode(), linked_ABC6.hashCode());
+        assertEquals(array_ABC6.hashCode(), linked_ABC6.hashCode());
     }
 
     // no hash code tests for empty list //
