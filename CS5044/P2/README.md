@@ -13,6 +13,13 @@ enforcing the safety rules that govern when each action is allowed to succeed.
 - Return a specific `Result` value for every action, following defined precedence rules when
   multiple conditions could apply (e.g. gear-not-in-park takes priority over door-locked)
 
+## Design Constraints
+
+The assignment prohibited nested branches and the `&&`/`||` logical operators
+(only `!` was allowed). This is why the precedence logic is implemented as a
+sequence of independent `if` statements with early returns, each checking one
+condition, rather than combined boolean expressions.
+
 ## Requirements
 
 - JDK 17+ (developed/tested with Java 17)
