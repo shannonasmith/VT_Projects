@@ -61,7 +61,9 @@ subdirectories and confirming the output files correctly separated and listed ea
 full path. Task 2 was verified against the real DNS log file, and all seven reported values
 (record counts, timestamps, unique IP/domain counts, and most-common values) were
 cross-checked using independent command-line tools (`awk`, `sort`, `uniq`) to confirm
-correctness.
+correctness. The record filter identifies Type A forward DNS queries while explicitly
+excluding any record whose queried domain is in reverse-lookup format
+(`*.in-addr.arpa`), even if logged under record type A.
 
 ## Setting This Up on Another PC
 
