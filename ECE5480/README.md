@@ -1,6 +1,6 @@
-# ECE 5480 – Cybersecurity of IoT
+# ECE 5480 – Cybersecurity and the Internet of Things (Virginia Tech)
 
-Coursework from Virginia Tech's ECE 5480 (Cybersecurity of IoT), covering Python for
+Coursework from Virginia Tech's ECE 5480, covering Python for
 security automation, password/hash attacks, filesystem and log analysis, and hands-on web
 and network attack labs (CSRF, XSS, and DNS spoofing/poisoning) in a SEED Labs
 Docker/VM environment.
