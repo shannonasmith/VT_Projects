@@ -13,10 +13,15 @@ not a strict spec - some details were free to evolve during implementation.
 ## Pages
 
 - `index.html` - home page
-[![](https://github.com/shannonasmith/VT_Projects/raw/main/CS5244/P2/Smith_Shannon_Pp2_index-html.jpg)](https://github.com/shannonasmith/VT_Projects/blob/CS5244/P2/Smith_Shannon_Pp2_index-html.jpg)
+
+<div align="center">
+  <img src="Smith_Shannon_Pp2_index-html.jpg" width="900">
+</div>
+
 - `category.html` - category page (one category and its books, hardcoded
   for this stage; category switching comes in a later project)
 
+[![](https://github.com/shannonasmith/VT_Projects/raw/main/CS5244/P2/Smith_Shannon_Pp2_index-html.jpg)](https://github.com/shannonasmith/VT_Projects/blob/CS5244/P2/Smith_Shannon_Pp2_index-html.jpg)
 
 ## Header Requirements (Both Pages)
 
