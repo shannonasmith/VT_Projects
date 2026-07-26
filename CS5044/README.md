@@ -8,12 +8,12 @@ GUI integration.
 
 | Project | Topic | Skills Demonstrated |
 |---|---|---|
-| [P0](./P0) | Hello 5044 | Java basics, ASCII output, project/package setup |
-| [P1](./P1) | Shuttle Battery Monitor | Instance state, accessor/mutator design, informal (println-based) testing, truncation/rounding arithmetic |
-| [P2](./P2) | Minivan Sliding Door | State-machine logic, enumerated types, precedence-ordered conditionals under a no-nested-branch/no-&&-\|\| constraint |
-| [P3](./P3) | Tetris AI | Interface implementation, heuristic cost functions, JUnit test-driven development, weight tuning against a scoring benchmark |
-| [P4](./P4) | Dots and Boxes Game Engine | Delegation to a helper class, exception-based defensive programming, full JUnit branch coverage |
-| [P5](./P5) | Dots and Boxes GUI | Swing GUI integration (MVC-style separation from P4's engine), event-driven programming, provided-test-suite validation |
+| [Project0](./P0) | Hello 5044 | Java basics, ASCII output, project/package setup |
+| [Project1](./P1) | Shuttle Battery Monitor | Instance state, accessor/mutator design, informal (println-based) testing, truncation/rounding arithmetic |
+| [Project2](./P2) | Minivan Sliding Door | State-machine logic, enumerated types, precedence-ordered conditionals under a no-nested-branch/no-&&-\|\| constraint |
+| [Project3](./P3) | Tetris AI | Interface implementation, heuristic cost functions, JUnit test-driven development, weight tuning against a scoring benchmark |
+| [Project4](./P4) | Dots and Boxes Game Engine | Delegation to a helper class, exception-based defensive programming, full JUnit branch coverage |
+| [Project5](./P5) | Dots and Boxes GUI | Swing GUI integration (MVC-style separation from P4's engine), event-driven programming, provided-test-suite validation |
 
 ## Progression
 
