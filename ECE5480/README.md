@@ -9,13 +9,12 @@ Docker/VM environment.
 
 | Folder | Type | Summary |
 |---|---|---|
-| [Python-Fundamentals](./Python-Fundamentals) | Scripts | Small warmup scripts covering core Python concepts applied to security (e.g. password brute-force time estimation). |
-| [Project1](./Project1) | Scripts | Python for security automation — fetching and parsing web content with `requests`/`BeautifulSoup`, scripted search/link harvesting, and automated host availability sweeps. |
-| [Project2](./Project2) | Scripts | Rainbow table password attack — builds an MD5 rainbow table from a plaintext password list, then recovers plaintext passwords from captured hashes with per-lookup timing. |
-| [Project3](./Project3) | Scripts | Filesystem enumeration and large-scale DNS log analysis — parses tens of thousands of real DNS server log records to extract query statistics (unique clients, unique domains, most-common values). |
-| [Project4](./Project4) | Attack lab writeup | Cross-Site Request Forgery (CSRF) attack against a vulnerable web application (Elgg) — forged an authenticated "add friend" action from a victim's browser with no user interaction, plus the token-based countermeasure that defeats it. |
-| [Project5](./Project5) | Attack lab writeup | Cross-Site Scripting (XSS) attack progression against the same application — from basic script injection through session cookie exfiltration to a self-propagating worm modeled on the 2005 Samy MySpace worm. |
-| [Project6](./Project6) | Attack lab writeup | Local DNS attacks using Scapy — direct response spoofing, DNS cache poisoning, and full-domain compromise via forged NS (nameserver) records. |
+| [Project1](./P1) | Scripts | Python for security automation — fetching and parsing web content with `requests`/`BeautifulSoup`, scripted search/link harvesting, and automated host availability sweeps. |
+| [Project2](./P2) | Scripts | Rainbow table password attack — builds an MD5 rainbow table from a plaintext password list, then recovers plaintext passwords from captured hashes with per-lookup timing. |
+| [Project3](./P3) | Scripts | Filesystem enumeration and large-scale DNS log analysis — parses tens of thousands of real DNS server log records to extract query statistics (unique clients, unique domains, most-common values). |
+| [Project4](./P4) | Attack lab writeup | Cross-Site Request Forgery (CSRF) attack against a vulnerable web application (Elgg) — forged an authenticated "add friend" action from a victim's browser with no user interaction, plus the token-based countermeasure that defeats it. |
+| [Project5](./P5) | Attack lab writeup | Cross-Site Scripting (XSS) attack progression against the same application — from basic script injection through session cookie exfiltration to a self-propagating worm modeled on the 2005 Samy MySpace worm. |
+| [Project6](./P6) | Attack lab writeup | Local DNS attacks using Scapy — direct response spoofing, DNS cache poisoning, and full-domain compromise via forged NS (nameserver) records. |
 
 ## Skills Demonstrated
 
