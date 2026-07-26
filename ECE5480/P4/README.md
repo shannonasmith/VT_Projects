@@ -51,7 +51,9 @@ with no click or user action required:
 The `friend` parameter is set to Boby's GUID (57) — this is what determines *who* gets
 added to the victim's friends list once the forged request succeeds.
 
-![Attack payload embedded in addfriend.html](images/attack-payload-addfriend-html.png)
+<div align="center">
+     <img src="attack-payload-addfriend-html.png" width="700">
+</div>
 
 ### Step 4 — Delivering the Payload
 
@@ -65,7 +67,9 @@ When Alice clicked the link and visited the attacker's page while still logged i
 (active session cookie present), her browser automatically fired the forged GET request to
 the real Elgg server, carrying her valid session cookie along with it.
 
-![HTTP traffic captured during the attack](images/attack-traffic-capture.png)
+<div align="center">
+     <img src="attack-traffic-capture.png" width="700">
+</div>
 
 ### Step 6 — Confirming Success
 
@@ -73,7 +77,9 @@ Before the attack, Alice's friends list was empty. After she visited the malicio
 Boby appeared in her friends list — despite her never clicking "Add Friend" or taking any
 explicit action to add him.
 
-![Alice's friends list after the attack, showing Boby added](images/attack-success-friends-list.png)
+<div align="center">
+     <img src="attack-success-friends-list.png" width="700">
+</div>
 
 ## Countermeasure: Secret Tokens
 
