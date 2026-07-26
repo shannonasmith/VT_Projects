@@ -1,0 +1,30 @@
+footer {
+  background: var(--secondary-background-color);
+  color: var(--default-text-color);
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  gap: 1em;
+}
+
+.container {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-family: "Marcellus SC";
+  font-size: 17px;
+}
+
+footer > * {
+  flex-basis: 100%;
+}
+
+.links {
+  text-align: center;
+  text-decoration: none;
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5em;
+}

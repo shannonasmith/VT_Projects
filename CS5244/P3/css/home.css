@@ -1,0 +1,55 @@
+.home-page {
+  display: flex;
+  text-align: center;
+  padding: 2em 0 0 0;
+}
+
+.body {
+  background-image: url("images/books/site/background-image.jpg");
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.welcome-text {
+  color: #063D0F;
+  font-size: 25px;
+}
+
+.shop-for-books button {
+  border: none;
+  display: inline-block;
+  padding: 8px 40px;
+  color: #fff;
+  background-color: #063D0F;
+  text-align: center;
+  cursor: pointer;
+}
+
+.shop-for-books button:hover {
+  background-color: var(--primary-color-light);
+  color: #fff;
+}
+
+.category-image-items {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 1em;
+}
+
+.category-image-items a {
+  cursor: pointer;
+}
+
+.category-image-items div {
+  padding: 0.5em 0.5em;
+  background: rgba(6, 61, 15, 0.75); /* last # is percent opacity */
+  color: white;
+  transform: translateY(-2.25em);
+  margin-bottom: -2em;
+}
