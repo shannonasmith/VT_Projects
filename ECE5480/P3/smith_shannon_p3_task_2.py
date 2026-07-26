@@ -29,7 +29,9 @@ good_records = []
 
 # create a for loop
 for line in lines:
-    if "IN A +" in line:
+    # keep Type A (forward) queries; explicitly exclude any that are actually
+    # reverse lookups (domain ends in in-addr.arpa) even if logged as type A
+    if " IN A " in line and "in-addr.arpa" not in line:
         good_records.append(line)
         
 print("\n", "3) Total number of records = ", str(len(good_records))) # 30405
