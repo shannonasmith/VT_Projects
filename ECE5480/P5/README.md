@@ -47,7 +47,9 @@ This demonstrates the actual security impact of XSS: a script running in the vic
 browser context has full access to `document.cookie`, including session identifiers that
 should never be exposed to a third party.
 
-![Cookie value disclosed via XSS popup](images/task2-cookie-disclosure-popup.png)
+<div align="center">
+     <img src="task2-cookie-disclosure-popup.png" width="700">
+</div>
 
 ### Task 3 — Exfiltrating Cookies to the Attacker
 
@@ -67,7 +69,9 @@ machine — cookie value included — even though no image actually exists there
 listener on the attacker side (`nc -lknv 5555`) captures the incoming request and the
 victim's session cookie in the request line.
 
-![Netcat capturing the exfiltrated session cookie](images/task3-cookie-exfiltration-capture.png)
+<div align="center">
+     <img src="task3-cookie-exfiltration-capture.png" width="700">
+</div>
 
 ### Task 4 — Self-Propagating Attack (Samy Worm Pattern)
 
@@ -104,7 +108,9 @@ It then fires an AJAX request to Elgg's "add friend" endpoint using the attacker
 Before the attack, Alice's friends list was empty. After simply viewing Samy's infected
 profile — no click, no form submission — Samy appeared in her friends list:
 
-![Alice's friends list showing the attacker added automatically](images/task4-worm-attack-success.png)
+<div align="center">
+     <img src="task4-worm-attack-success.png" width="700">
+</div>
 
 This is structurally the same technique behind the 2005 Samy worm, which used a nearly
 identical self-propagating friend-request payload to add over one million MySpace friends
