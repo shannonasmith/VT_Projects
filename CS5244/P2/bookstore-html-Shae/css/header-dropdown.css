@@ -1,0 +1,40 @@
+.header-dropdown {
+  position: relative;
+}
+
+.header-dropdown ul {
+  background-color: white;
+  color: #063D0F;
+  display: none;
+}
+
+.header-dropdown li {
+  padding: 0.25em 0.5em;
+}
+
+.header-dropdown a {
+  color: #063D0F;
+  text-decoration: none; /* removes underline */
+}
+
+.header-dropdown li:hover {
+  font-weight: bold;
+}
+
+.header-dropdown:hover ul {
+  display: block;
+  position: absolute;
+  min-width: 8em;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.categories-button {
+  min-width: 8em;
+  height: 40px;
+  background-color: var(--primary-color);
+  margin-top: 1em;
+  border: none;
+}
+
+

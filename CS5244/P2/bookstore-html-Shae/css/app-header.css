@@ -1,0 +1,92 @@
+header {
+  background: var(--secondary-background-color);
+  color: var(--secondary-text-color);
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.bookstore-logo {
+  justify-content: flex-start;
+  /* align-items: center; */
+  margin-bottom: 0;
+}
+
+.text-logo {
+  font-family: "Marcellus SC";
+  text-align: center;
+  font-size: 30px;
+  margin-top: auto;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  border-width: 10px;
+  border-color: #063D0F;
+  font-size: 14px;
+  text-align: left;
+}
+
+.search-bar input {
+  font-family: "Martel Sans";
+  width: 1450px;
+  padding-left: 1em;
+  border: none;
+  outline: 0;
+}
+
+.search-bar button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  border: none; 
+  padding: 0.5em 1.5em;
+  cursor: pointer;
+}
+
+.shopping-cart img {
+  position: relative;
+  width: 45px;
+  right: 65%;
+}
+
+.shopping-cart span {
+  font-family: "Marcellus";
+  background-color: #063D0F;
+  border-radius: 50%;
+  color: #fff;
+  position: absolute;
+  transform: translateX(-7px);
+  transform: translateY(-40px);
+  padding: 1px 5px;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: row;
+  }
+}
+
+.user-account img {
+  display: inline-block;
+  width: 22px;
+  cursor: pointer;
+  transform: translateX(-7px);
+}
+
+.user-account {
+  display: inline-block;
+  font-family: "Marcellus SC";
+  font-size: 17px;
+  padding-bottom: 0.3em;
+  cursor: pointer;
+  transform: translateX(-3px);
+}
+
+.header-dropdown {
+  text-align: left;
+  transform: translateX(-10px);
+}
