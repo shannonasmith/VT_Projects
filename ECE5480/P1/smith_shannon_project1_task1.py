@@ -5,7 +5,6 @@
 
 # python smith_shannon_project1_task1.py
 
-
 import requests
 
 def getPageRequests(url):
@@ -16,8 +15,7 @@ def getPageRequests(url):
 
     # return myres.text
     return myres.text
-    
-    
+        
 # get url from user
 ui = input("Enter URL: ")
 url = getPageRequests(ui)
