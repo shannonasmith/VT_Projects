@@ -13,8 +13,10 @@ not a strict spec - some details were free to evolve during implementation.
 ## Pages
 
 - `index.html` - home page
+[![](https://github.com/shannonasmith/VT_Projects/CS5244/P2/images/Smith_Shannon_Pp2_index-html.jpg)](https://github.com/shannonasmith/VT_Projects/blob/CS5244/P2/images/Smith_Shannon_Pp2_index-html.jpg)
 - `category.html` - category page (one category and its books, hardcoded
   for this stage; category switching comes in a later project)
+[![](https://github.com/shannonasmith/Cyber-Writups-VT/raw/main/images/Screenshot%202026-03-20%20171621.png)](https://github.com/shannonasmith/Cyber-Writups-VT/blob/main/images/Screenshot%202026-03-20%20171621.png)
 
 ## Header Requirements (Both Pages)
 
