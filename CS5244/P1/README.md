@@ -16,10 +16,18 @@ users to buy physical books and access electronic formats.
 - Featured categories/books with images
 - Call-to-action button ("Shop Now")
 
+<div align="center">
+  <img src="Smith_Shannon_Pp1_Welcome_Page.jpg" width="800">
+</div>
+
 **Category Page** (JPEG, 1200W x 800H)
 - Navigation with category buttons
 - Book grid (2 columns, 2 rows)
 - Book boxes with details and buttons
+
+<div align="center">
+  <img src="Smith_Shannon_Pp1_Category_Page.jpg" width="800">
+</div>
 
 ## Shared Header (Both Pages)
 
