@@ -1,32 +1,49 @@
-# Bounded Queue (CS 5704)
+<div align="center">
 
-A bounded, generic queue data structure (first-in-first-out) with three
-interchangeable implementations sharing a common base class.
+# 🔁 CS 5704 – Bounded Queue
 
-## Features
+![Focus](https://img.shields.io/badge/Focus-Data%20Structures%20%7C%20Shared%20Interface-blue?style=for-the-badge)
 
-- `Queue<E>` interface defining enqueue, dequeue, length, capacity, and full
-  value semantics (`equals`, `hashCode`, `toString`), plus `copy()`,
-  `clear()`, `newInstance()`, `first()`, `last()`, `isEmpty()`, `isFull()`,
-  and `appendAll()` (recursively drains one queue into another)
-- `AbstractQueue<E>` implements the shared logic (`toString`, `equals`,
-  `hashCode`, `copy`, `appendAll`, `isEmpty`, `isFull`) once, on top of each
-  subclass's core `enqueue`/`dequeue`/`length`/`iterator` operations
+</div>
+
+---
+
+## 🧠 What It Does
+
+A bounded, generic queue data structure (first-in-first-out) with three interchangeable
+implementations sharing a common base class.
+
+## 🎯 Why It Matters
+
+All three implementations are interchangeable: queues from different implementations with
+the same elements and capacity are `.equals()` to each other and produce the same
+`hashCode()` - verified across genuinely different internal storage strategies, not just
+similar ones.
+
+---
+
+## ✨ Features
+
+- `Queue<E>` interface defining enqueue, dequeue, length, capacity, and full value
+  semantics (`equals`, `hashCode`, `toString`), plus `copy()`, `clear()`, `newInstance()`,
+  `first()`, `last()`, `isEmpty()`, `isFull()`, and `appendAll()` (recursively drains one
+  queue into another)
+- `AbstractQueue<E>` implements the shared logic once, on top of each subclass's core
+  `enqueue`/`dequeue`/`length`/`iterator` operations
 - `ListQueue<E>` - `LinkedList`-backed implementation
 - `LinkedQueue<E>` - custom doubly-linked-node implementation
-- `CircArrayQueue<E>` - fixed-size circular array implementation, reusing
-  freed slots via modulo arithmetic rather than shifting elements
-- All three implementations are interchangeable: queues from different
-  implementations with the same elements and capacity are `.equals()` to
-  each other and produce the same `hashCode()`
+- `CircArrayQueue<E>` - fixed-size circular array implementation, reusing freed slots via
+  modulo arithmetic rather than shifting elements
 
-## Requirements
+---
+
+## 🛠️ Requirements
 
 - JDK 17+ (developed/tested with Java 17)
 - IntelliJ IDEA (Community Edition works fine)
 - JUnit 4
 
-## How to Run
+## ▶️ How to Run
 
 1. Open IntelliJ IDEA
 2. **File → Open**, select this project's folder (the one containing `src/` and `test/`)
@@ -37,52 +54,46 @@ interchangeable implementations sharing a common base class.
 6. If the `test` folder shows a "located outside of the module source root" warning,
    right-click the `test` folder → **Mark Directory as → Test Sources Root**
 7. In the Project panel: `test → boundedqueue`
-8. Right-click each of `ListQueueTest`, `LinkedQueueTest`, and `CircArrayQueueTest`
-   → **Run** individually
+8. Right-click each of `ListQueueTest`, `LinkedQueueTest`, and `CircArrayQueueTest` →
+   **Run** individually
 
-## Testing Approach
+---
 
-Each implementation is tested against the same set of behaviors: initial
-state, enqueue/dequeue order (FIFO), capacity limits (`IllegalStateException`
-when full, `IllegalArgumentException` on a null element), `first()`/`last()`,
-`toString` formatting, `equals`/`hashCode` consistency across queues with
-matching and differing contents/capacities, `copy()`, `clear()`, and
-`appendAll()`. Cross-implementation `equals`/`hashCode` tests confirm that
-different implementations holding identical data are treated as equal
-through the shared `Queue<E>` interface, rather than by reference or
+## 🧪 Testing Approach
+
+Each implementation is tested against the same set of behaviors: initial state,
+enqueue/dequeue order (FIFO), capacity limits (`IllegalStateException` when full,
+`IllegalArgumentException` on a null element), `first()`/`last()`, `toString` formatting,
+`equals`/`hashCode` consistency across queues with matching and differing
+contents/capacities, `copy()`, `clear()`, and `appendAll()`. Cross-implementation
+`equals`/`hashCode` tests confirm that different implementations holding identical data
+are treated as equal through the shared `Queue<E>` interface, rather than by reference or
 implementation type.
 
-## Expected Output
+---
 
-All test methods in `ListQueueTest`, `LinkedQueueTest`, and `CircArrayQueueTest`
-should pass (green checkmarks in IntelliJ's test runner panel, process exits
-with code 0).
+## ✅ Expected Output
 
-## Setting This Up on Another PC
+All test methods in `ListQueueTest`, `LinkedQueueTest`, and `CircArrayQueueTest` should
+pass (green checkmarks in IntelliJ's test runner panel, process exits with code 0).
 
-**Option 1: Download only (no git required)**
-1. On GitHub, go to this repo -> green **Code** button -> **Download ZIP**
+---
+
+## 💻 Setting This Up on Another PC
+
+**Option 1 — Download ZIP**
+1. On GitHub, go to this repo → green **Code** button → **Download ZIP**
 2. Unzip it wherever you want
-3. Open the folder in IntelliJ (`File -> Open`) and follow "How to Run" above
-4. Note: changes made this way don't sync back to GitHub automatically -
-   you'd need to manually re-upload any changed files
+3. Open the folder in IntelliJ (`File → Open`) and follow "How to Run" above
 
-**Option 2: Git clone (two-way sync)**
+**Option 2 — Git Clone**
 1. Install Git: https://git-scm.com/downloads
-2. Open a terminal and run:
-   ```
-   git clone https://github.com/yourusername/your-repo.git
-   ```
+2. `git clone https://github.com/yourusername/your-repo.git`
 3. Open the cloned folder in IntelliJ and follow "How to Run" above
-4. To pull future updates: `git pull`
-5. To push changes back: `git add .`, `git commit -m "message"`, `git push`
 
-Option 1 is simplest if you're just running/reviewing the project elsewhere.
-Option 2 is worth it if you'll be actively editing code from more than one
-machine and want changes to sync both ways.
+---
 
-## Notes
+## 📝 Notes
 
-- `.idea/` and `out/` folders are intentionally not included - these are
-  IDE-specific/build files that regenerate automatically when you open the
-  project fresh in IntelliJ.
+- `.idea/` and `out/` folders are intentionally not included - these regenerate
+  automatically when you open the project fresh in IntelliJ.
