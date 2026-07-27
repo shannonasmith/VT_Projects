@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🦆 CS 5704 – DuckSim: Design Patterns
+# 🦆 CS 5704 – P3: DuckSim: Design Patterns
 
 ![Focus](https://img.shields.io/badge/Focus-Six%20Design%20Patterns-purple?style=for-the-badge)
 
