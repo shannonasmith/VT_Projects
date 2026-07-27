@@ -1,6 +1,6 @@
 <div align="center">
 
-# 💭 DreamCatcher — Part 2B: Database & Navigation
+# 💭 DreamCatcher — P2B: Database & Navigation
 
 ### Adding Room persistence, Navigation Component wiring, and dialog-based data entry to the list-detail app
 
