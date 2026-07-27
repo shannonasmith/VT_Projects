@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧩 MultiQuiz — Part 1A: Single Question
+# 🧩 MultiQuiz — P1A: Single Question
 
 ### An Android quiz screen introducing View Binding, functional-style list processing, and multi-state button interaction
 
