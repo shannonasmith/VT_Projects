@@ -52,8 +52,8 @@ Verified via the instructor-provided instrumented test suites (`DreamListFragmen
 
 ## ✅ Expected Output
 
-<div align="center"><img src="p2a-list-screenshot.png" width="800"></div>
-<div align="center"><img src="p2a-detail-screenshot.png" width="800"></div>
+<div align="center"><img src="p2a-list-screenshot.png" width="350"></div>
+<div align="center"><img src="p2a-detail-screenshot.png" width="700"></div>
 
 The list screen scrolls smoothly through 100 seeded dreams with consistent spacing regardless of whether a status icon is present. The detail screen displays a single placeholder dream with its title, timestamp, status checkboxes, and entries, in both portrait and landscape orientation.
 
