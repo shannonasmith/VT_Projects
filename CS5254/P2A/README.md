@@ -1,6 +1,6 @@
 <div align="center">
 
-# 💭 DreamCatcher — Part 2A: List & Detail
+# 💭 DreamCatcher — P2A: List & Detail
 
 ### The first stage of a Room-backed, fragment-based CRUD app for tracking personal goals and their progress
 
