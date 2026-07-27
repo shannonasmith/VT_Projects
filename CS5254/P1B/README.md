@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧩 MultiQuiz — Part 1B: Multiple Questions
+# 🧩 MultiQuiz — P1B: Multiple Questions
 
 ### Extending the single-question quiz into a multi-question flow backed by a ViewModel for rotation-safe state
 
