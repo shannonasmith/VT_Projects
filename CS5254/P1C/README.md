@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧩 MultiQuiz — Part 1C: Results Activity
+# 🧩 MultiQuiz — P1C: Results Activity
 
 ### Completing the MultiQuiz build with a second activity, inter-activity data passing, and a full instrumented test suite
 
