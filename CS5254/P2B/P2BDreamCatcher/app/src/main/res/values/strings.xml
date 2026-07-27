@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">DreamCatcher</string>
+
+    <string name="dream_header">Dream</string>
+    <string name="title_text">My First Dream</string>
+    <string name="last_updated_text">Last updated %1$s</string>
+    <string name="entries_header">Entries</string>
+    <string name="fulfilled_checkbox">Fulfilled</string>
+    <string name="deferred_checkbox">Deferred</string>
+    <string name="entry_0_button">Button 0</string>
+    <string name="entry_1_button">Button 1</string>
+    <string name="entry_2_button">Button 2</string>
+    <string name="entry_3_button">Button 3</string>
+    <string name="entry_4_button">Button 4</string>
+
+    <string name="list_item_title">Dream</string>
+    <string name="list_item_reflection_count">Reflections: %1$d</string>
+    <string name="dream_title_hint">Dream Title</string>
+
+    <string name="reflection_hint">Enter reflection text</string>
+    <string name="reflection_dialog_title">Add Reflection</string>
+    <string name="reflection_dialog_positive">Add</string>
+    <string name="reflection_dialog_negative">Cancel</string>
+    <string name="add_reflection_button">Add Reflection</string>
+</resources>
