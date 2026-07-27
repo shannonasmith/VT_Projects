@@ -1,6 +1,6 @@
 <div align="center">
 
-# 💭 DreamCatcher — Part 2C: Complete
+# 💭 DreamCatcher — P2C: Complete
 
 ### The finished app — dream creation, swipe-to-delete, sharing, camera integration, and a scrollable entry list
 
