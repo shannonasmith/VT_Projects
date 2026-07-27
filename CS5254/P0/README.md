@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📱 GeoQuiz
+# 📱 P0: GeoQuiz
 
 ### A first-principles Android app introducing activity lifecycle, view binding, and user interaction in Kotlin
 
