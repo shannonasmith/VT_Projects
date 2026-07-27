@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">MultiQuiz</string>
+
+    <string name="question_1">Which actor appeared in every Star Wars movie?</string>
+    <string name="anthony">Anthony Daniels</string>
+    <string name="carrie">Carrie Fisher</string>
+    <string name="harrison">Harrison Ford</string>
+    <string name="mark">Mark Hamill</string>
+
+    <string name="question_2">Where did the Clone Wars begin?</string>
+    <string name="naboo">Naboo</string>
+    <string name="geonosis">Geonosis</string>
+    <string name="tatooine">Tatooine</string>
+    <string name="coruscant">Coruscant</string>
+
+    <string name="question_3">Where were the Hoth sequences filmed?</string>
+    <string name="iceland">Iceland</string>
+    <string name="denmark">Denmark</string>
+    <string name="norway">Norway</string>
+    <string name="greenland">Greenland</string>
+
+    <string name="question_4">How old is Chewbacca in The Force Awakens?</string>
+    <string name="fifty_five">Under 55 years</string>
+    <string name="seventy_eight">78 years old</string>
+    <string name="two_hundred">200 years old </string>
+    <string name="over_two_twenty">Over 220 years</string>
+
+    <string name="hint">Hint</string>
+    <string name="reset">Submit</string>
+</resources>
