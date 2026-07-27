@@ -1,16 +1,27 @@
-# Project 2 - Page Views (CS 5244)
+<div align="center">
 
-Static HTML/CSS implementation of the Welcome Page and Category Page,
-translating the Project 1 Figma mockups into real markup - no JavaScript,
-no frameworks, no preprocessors.
+# 🏗️ CS 5244 – P2: Page Views (HTML/CSS)
 
-## Overview
+![Focus](https://img.shields.io/badge/Focus-Static%20HTML%2FCSS-blue?style=for-the-badge)
 
-Building on the Project 1 design, this stage implements the actual page
-structure using plain HTML and CSS. The Figma mockups served as a guide,
-not a strict spec - some details were free to evolve during implementation.
+</div>
 
-## Pages
+---
+
+## 🧠 What It Does
+
+Static HTML/CSS implementation of the Welcome Page and Category Page, translating the P1
+Figma mockups into real markup - no JavaScript, no frameworks, no preprocessors.
+
+## 🎯 Why It Matters
+
+Confirms the design holds up as real, responsive markup before any framework complexity is
+introduced - the same visual system, now actually rendered by a browser instead of a
+static image.
+
+---
+
+## 📄 Pages
 
 - `index.html` - home page
 
@@ -18,46 +29,47 @@ not a strict spec - some details were free to evolve during implementation.
   <img src="Smith_Shannon_Pp2_index-html.jpg" width="800">
 </div>
 
-- `category.html` - category page (one category and its books, hardcoded
-  for this stage; category switching comes in a later project)
+- `category.html` - category page (one category and its books, hardcoded for this stage;
+  category switching comes in a later project)
 
 <div align="center">
   <img src="Smith_Shannon_Pp2_category-html.jpg" width="800">
 </div>
 
-## Header Requirements (Both Pages)
+---
+
+## 🧩 Header Requirements (Both Pages)
 
 - Logo image and logo text both link to the welcome page
 - All dropdown menu options link to the category page
 - Search represented by an image (magnifying glass icon), not a button
-- Shopping cart represented by an image, with cart count placed sensibly
-  (over or inside the cart icon)
-- Categories menu uses a down-caret/arrow, or a standard hamburger icon if
-  using a hamburger menu - hover-triggered for this stage (click-triggered
-  requires JavaScript, added in a later project)
+- Shopping cart represented by an image, with cart count placed sensibly (over or inside
+  the cart icon)
+- Categories menu uses a down-caret/arrow, or a standard hamburger icon if using a
+  hamburger menu - hover-triggered for this stage
 - Social media links represented by images
 
-## Design Differentiation from Starter Code
+---
 
-The provided `bookstore-html.zip` starter ("Another Bookstore") could not be
-reused directly - the following had to be original to this site:
-- Logo (not the starter logo)
-- Category images (not the starter images)
-- Book selection (some overlap with the starter's books is fine)
-- Custom CSS properties - fonts and colors distinct from the starter,
-  with properties added/removed/renamed to fit this site's own design
-- Button styling - no bevels, and buttons replaced with images where
-  Project 1's requirements called for icon-based controls
+## 🎨 Design Differentiation from Starter Code
 
-## CSS Architecture Note
+The provided starter code ("Another Bookstore") could not be reused directly - the
+following had to be original to this site:
+- Logo, category images, and book selection (not the starter's)
+- Custom CSS properties - fonts and colors distinct from the starter
+- Button styling - no bevels, and buttons replaced with images where P1's requirements
+  called for icon-based controls
 
-The starter code intentionally splits CSS across many small files rather
-than one per page. This anticipates the move to Vue.js in the next project,
-where each Vue component bundles its own HTML, JavaScript, and CSS - so
-CSS files that roughly correspond to future components reduce rework later,
-even though the mapping won't be perfectly 1-to-1.
+## 🗂️ CSS Architecture Note
 
-## Requirements Checklist
+The starter code intentionally splits CSS across many small files rather than one per
+page. This anticipates the move to Vue.js in the next project, where each Vue component
+bundles its own HTML, JavaScript, and CSS - so CSS files that roughly correspond to future
+components reduce rework later.
+
+---
+
+## ✅ Requirements Checklist
 
 - Layout holds up between 1000px-1400px width
 - Book images sized around 200px in height
@@ -70,10 +82,11 @@ even though the mapping won't be perfectly 1-to-1.
 - Selected category button is styled distinctly from unselected ones
 - Book boxes wrap appropriately as page width changes
 - At least one book shows a "Read Now" button; at least one does not
-- Book title/author/price are each styled distinctly from one another,
-  not copied from the starter's styling
+- Book title/author/price are each styled distinctly from one another
 
-## Notes
+---
 
-No JavaScript, SASS/preprocessors, or frameworks (e.g. Bootstrap) were used
-at this stage, per the assignment constraints - plain HTML and CSS only.
+## 📝 Notes
+
+No JavaScript, SASS/preprocessors, or frameworks (e.g. Bootstrap) were used at this stage,
+per the assignment constraints - plain HTML and CSS only.
