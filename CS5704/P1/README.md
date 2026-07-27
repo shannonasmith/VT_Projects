@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🔁 CS 5704 – Bounded Queue
+# 🔁 CS 5704 – P1: Bounded Queue
 
 ![Focus](https://img.shields.io/badge/Focus-Data%20Structures%20%7C%20Shared%20Interface-blue?style=for-the-badge)
 
