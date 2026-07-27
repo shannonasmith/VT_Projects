@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌊 CS 5704 – River Crossing
+# 🌊 CS 5704 – P2: River Crossing
 
 ![Focus](https://img.shields.io/badge/Focus-Refactoring%20%7C%20Generalization-green?style=for-the-badge)
 
