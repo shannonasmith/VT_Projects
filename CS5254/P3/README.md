@@ -55,8 +55,8 @@ Verified via the instructor-provided instrumented test suite (`P3Test.kt`) again
 ## ✅ Expected Output
 
 <div align="center"><img src="p3-screenshot.png" width="800"></div>
-<div align="center"><img src="p3-gallery-screenshot.png" width="800"></div>
-<div align="center"><img src="p3-map-screenshot.png" width="800"></div>
+<div align="center"><img src="p3-gallery-screenshot.png" width="350"></div>
+<div align="center"><img src="p3-map-screenshot.png" width="700"></div>
 
 The Gallery tab fills the grid with 99 photos across 33 even rows. The Map tab shows photo markers scattered across their real-world locations; tapping a marker centers the map and shows its title, and tapping it again opens the photo's detail page.
 
