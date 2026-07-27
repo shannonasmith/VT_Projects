@@ -26,7 +26,7 @@ patterns deliberately rather than incidentally.
 
 ---
 
-### 📚 boundedstack — [Bounded Stack](./boundedstack) 🔗
+### 📚 P0 — boundedstack — [Bounded Stack](./boundedstack) 🔗
 
 ![Focus](https://img.shields.io/badge/Focus-Data%20Structures%20%7C%20Shared%20Interface-blue)
 
@@ -46,7 +46,7 @@ mechanism, not just in theory but in tested behavior.
 
 ---
 
-### 🔁 boundedqueue — [Bounded Queue](./boundedqueue) 🔗
+### 🔁 P1 — boundedqueue — [Bounded Queue](./boundedqueue) 🔗
 
 ![Focus](https://img.shields.io/badge/Focus-Data%20Structures%20%7C%20Shared%20Interface-blue)
 
@@ -68,7 +68,7 @@ through the shared interface.
 
 ---
 
-### 🌊 rivercrossing — [River Crossing](./rivercrossing) 🔗
+### 🌊 P2 — rivercrossing — [River Crossing](./rivercrossing) 🔗
 
 ![Focus](https://img.shields.io/badge/Focus-Refactoring%20%7C%20Generalization-green)
 
@@ -89,7 +89,7 @@ variants required no GUI changes at all, which is the actual point of the refact
 
 ---
 
-### 🦆 DuckSim — [Design Patterns](./DuckSim) 🔗
+### 🦆 P3 — DuckSim — [Design Patterns](./DuckSim) 🔗
 
 ![Focus](https://img.shields.io/badge/Focus-Six%20Design%20Patterns-purple)
 
