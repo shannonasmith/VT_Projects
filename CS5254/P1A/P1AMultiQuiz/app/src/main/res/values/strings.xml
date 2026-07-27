@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MultiQuiz</string>
+    <string name="question_australia">Which is the capital of Australia?</string>
+    <string name="brisbane">Brisbane</string>
+    <string name="canberra">Canberra</string>
+    <string name="melbourne">Melbourne</string>
+    <string name="sydney">Sydney</string>
+    <string name="lifeline">50:50</string>
+    <string name="reset">Reset</string>
+</resources>
