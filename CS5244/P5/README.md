@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌐 Project 5 — Fetch
+# 🌐 P5 — Fetch
 
 ### Connecting the Vue client to the live REST API, replacing local/static book and category data with real fetch calls
 
