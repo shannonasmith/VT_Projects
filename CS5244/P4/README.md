@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🗄️ Project 4 — DAO Pattern and REST API
+# 🗄️ P4 — DAO Pattern and REST API
 
 ### Introducing a real, database-backed server with a DAO layer and a JAX-RS REST API
 
