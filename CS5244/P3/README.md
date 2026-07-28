@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🖥️ Project 3 — Page Views in Vue
+# 🖥️ P3 — Page Views in Vue
 
 ### Reimplementing a static HTML/CSS bookstore site as a Vue single-page application
 
