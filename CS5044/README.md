@@ -1,6 +1,6 @@
 <div align="center">
 
-# ☕ CS 5044 – Advanced Programming (Virginia Tech)
+# ☕ CS 5044 – Object-Oriented Programming with Java (Virginia Tech)
 ## 🧩 OOP Design • Algorithmic AI • Data Structures • GUI Integration
 
 ![Focus](https://img.shields.io/badge/Focus-Java%20%7C%20OOP%20%7C%20Testing-blue?style=for-the-badge)
