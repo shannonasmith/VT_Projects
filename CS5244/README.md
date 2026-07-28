@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📚 CS 5244 – Client-Side Web Development (Virginia Tech)
+# 📚 CS 5244 – Web Application Development (Virginia Tech)
 ## 🛒 Shae's Books — Full-Stack Bookstore Application
 
 ![Focus](https://img.shields.io/badge/Focus-Vue.js%20%7C%20Java%20REST%20API%20%7C%20MySQL-blue?style=for-the-badge)
