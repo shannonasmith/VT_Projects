@@ -10,94 +10,11 @@
 
 ## 🧭 Why This Document Exists
 
-This course was originally built against Virginia Tech's shared infrastructure — a MySQL
-server at `cs5244.cs.vt.edu` and an archive-upload deployment target. Since that server is
-no longer reachable, every project in this repository was migrated to run entirely on a
-local Windows development machine: local MySQL instead of the VT server, local Tomcat
-instead of remote deployment.
-
-This document captures the actual setup steps and fixes that were needed to get that
-migration working, so the same environment can be reproduced on another machine without
-re-discovering each issue from scratch. It is **not** a log of bugs in the bookstore
-application code itself — it's infrastructure and tooling setup.
-
----
-
-## 🗄️ Database: Migrating from VT's MySQL Server to Local MySQL
-
-### Why
-
-The original `context.xml` for each server-side project pointed at:
-```
-url="jdbc:mysql://cs5244.cs.vt.edu:3306/[Name]BookstoreDB"
-username="[pid]"
-password="[pin]"
-```
-That server is no longer reachable outside the course. A local MySQL install replaces it
-with no changes needed to schema or DAO code, aside from what's listed below.
-
-### Install MySQL Community Server
-
-1. Download the **full offline installer** (`mysql-installer-community-8.0.46.0.msi`), not
-   the smaller web-installer variant, from https://dev.mysql.com/downloads/installer/
-2. Run it, choose **"Server only"** as the setup type
-3. In the configuration wizard: "Development Computer" config type, **"Use Strong Password
-   Encryption"** authentication, set a root password, leave it configured to run as a
-   Windows service
-4. Click **Execute** through all configuration steps
-
-### Add `mysql` to PATH
-
-The installer does not automatically add the client to PATH on Windows. Fix (no admin
-rights required):
-```powershell
-[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Program Files\MySQL\MySQL Server 8.0\bin", "User")
-```
-**Close and reopen your terminal** after running this — PATH changes never apply to an
-already-open shell.
-
-Verify:
-```powershell
-mysql -u root -p
-```
-
-### Create the local database
-
-The original `create.sql` script (which creates a MySQL user and grants privileges) is
-**not needed** for a local single-user MySQL install — skip it. Just create the schema
-directly:
-```sql
-CREATE DATABASE [Name]BookstoreDB DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-```
-
-Note: on Windows, MySQL database names are case-insensitive, so `ShaeBookstoreDB` and
-`shaebookstoredb` refer to the same database. This is expected and not an error.
-
-### Load schema and seed data
-
-Both `schema.sql` and `data.sql` (from `src/main/resources/`) run against a local MySQL
-instance largely unmodified. In each file, remove the `USE [Name]BookstoreDB;` line at the
-top — a local connection is already scoped to the correct database via the JDBC URL, and
-`USE` isn't necessary (and can cause console/tooling confusion).
-
-**Run the full script, not one statement at a time.** In IntelliJ's Database console, make
-sure you use the "execute script" action (runs every statement in order) rather than
-"execute statement" (runs only whichever single statement your cursor is in) — running
-statements out of order will fail on foreign key constraints, since child tables get
-created before their parent tables exist.
-
-If IntelliJ flags `DELETE FROM ... ;` statements (no `WHERE` clause) as an "unsafe query,"
-that's expected for `data.sql`'s intentional full-table clear before reseeding — choose
-**"Execute all"** to proceed through every instance of that warning in one script run.
-
-### Point the application at the local database
-
-In each project's `context.xml` (under `src/main/webapp/META-INF/`):
-```xml
-url="jdbc:mysql://localhost:3306/[Name]BookstoreDB"
-username="root"
-password="[your local MySQL root password]"
-```
+This document captures environment setup and troubleshooting steps needed to get the
+Vue client, Tomcat server, and static assets working correctly on a local development
+machine. It is **not** a log of bugs in the bookstore application code itself — it's
+infrastructure and tooling setup, kept here so the same fixes don't need to be
+rediscovered at each new project stage.
 
 ---
 
@@ -227,11 +144,3 @@ problem. Try, in order:
 4. Restart the Vite dev server (`Ctrl+C`, then `npm run dev` again)
 5. As a last resort, clear Vite's cache: `Remove-Item -Recurse -Force node_modules\.vite`
 
----
-
-## 📎 Reusable Scripts in This Repository
-
-| Script | Purpose |
-|---|---|
-| `flatten-and-convert-images.ps1` | Flattens genre-subfoldered book images into one folder and converts JPG/JPEG to PNG |
-| `convert-to-png.ps1` | Converts every JPG/JPEG in a given folder to PNG, in place |
