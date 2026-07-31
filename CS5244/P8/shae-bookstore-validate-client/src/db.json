@@ -1,0 +1,114 @@
+{
+  "categories": [
+    {
+      "categoryId": 1001,
+      "name": "Staff Picks"
+    },
+    {
+      "categoryId": 1002,
+      "name": "Fiction"
+    },
+    {
+      "categoryId": 1003,
+      "name": "Nonfiction"
+    },
+    {
+      "categoryId": 1004,
+      "name": "Philosophy"
+    },
+    {
+      "categoryId": 1005,
+      "name": "Autobiography"
+    },
+    {
+      "categoryId": 1006,
+      "name": "Poetry"
+    },
+    {
+      "categoryId": 1007,
+      "name": "Science Fiction"
+    }
+  ],
+  "books": [
+    {
+      "bookId": 1001,
+      "title": "Fahrenheit 451",
+      "author": "Ray Bradbury",
+      "price": 1375,
+      "isPublic": false,
+      "categoryId": 1001
+    },
+    {
+      "bookId": 1002,
+      "title": "Venus Envy",
+      "author": "Rita Mae Brown",
+      "price": 1475,
+      "isPublic": true,
+      "categoryId": 1001
+    },
+    {
+      "bookId": 1003,
+      "title": "Crime and Punishment",
+      "author": "Fyodor Dostoyevsky",
+      "price": 1675,
+      "isPublic": false,
+      "categoryId": 1001
+    },
+    {
+      "bookId": 1004,
+      "title": "The Fountainhead",
+      "author": "Ayn Rand",
+      "price": 2175,
+      "isPublic": false,
+      "categoryId": 1001
+    },
+    {
+      "bookId": 1005,
+      "title": "Confessions of an Economic Hit Man",
+      "author": "John Perkins",
+      "price": 1275,
+      "isPublic": true,
+      "categoryId": 1001
+    },
+    {
+      "bookId": 1006,
+      "title": "Anything We Love Can Be Saved",
+      "author": "Alice Walker",
+      "price": 2475,
+      "isPublic": false,
+      "categoryId": 1001
+    },
+    {
+      "bookId": 1007,
+      "title": "The Way of the Peaceful Warrior",
+      "author": "Dan Millman",
+      "price": 1675,
+      "isPublic": false,
+      "categoryId": 1001
+    },
+    {
+      "bookId": 1008,
+      "title": "Symptoms of Being Human",
+      "author": "Jeff Garvin",
+      "price": 1175,
+      "isPublic": false,
+      "categoryId": 1001
+    },
+    {
+      "bookId": 1009,
+      "title": "Interpreter of Maladies",
+      "author": "Jhumpa Lahiri",
+      "price": 975,
+      "isPublic": true,
+      "categoryId": 1001
+    },
+    {
+      "bookId": 1010,
+      "title": "Thus Spoke Zarathustra",
+      "author": "Friedrich Nietzsche",
+      "price": 1275,
+      "isPublic": false,
+      "categoryId": 1001
+    }
+  ]
+}
