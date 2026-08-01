@@ -1,0 +1,1337 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection) or
+# paste cURL into the file and request will be converted to HTTP Request format.
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+GET http://localhost:8080/ShaeBookstoreOrder/api/categories
+Accept: application/json
+
+//////////////////////////// REQUIREMENTS ///////////////////////////////
+
+// * missing fields (as demonstrated in Q&A) - remove entire field from customer form
+// * empty fields (fields with empty string) = ""
+// * invalid fields (fields violating requirements)
+// * valid fields (valid values)
+
+### // ALL VALID FIELDS/VALUES
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe",
+    "address": "999 Circus Street",
+    "phone": "9198675309",
+    "email": "moeisapro@rocketmail.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+### Invalid name field - missing field
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "address": "999 Circus Street",
+    "phone": "9198675309",
+    "email": "moeisapro@rocketmail.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+### Invalid name field - empty field
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "",
+    "address": "999 Circus Street",
+    "phone": "9198675309",
+    "email": "moeisapro@rocketmail.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  Invalid name field - < 4
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe",
+    "address": "999 Circus Street",
+    "phone": "9198675309",
+    "email": "moeisapro@rocketmail.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  Invalid name field - > 45
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe is the pro that loves retro music and two other stooges",
+    "address": "999 Circus Street",
+    "phone": "9198675309",
+    "email": "moeisapro@rocketmail.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  Invalid address field - missing field
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe",
+    "phone": "9198675309",
+    "email": "moeisapro@rocketmail.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  Invalid address field - empty field
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe",
+    "address": "",
+    "phone": "9198675309",
+    "email": "moeisapro@rocketmail.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  Invalid address field - < 4
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe",
+    "address": "999",
+    "phone": "9198675309",
+    "email": "moeisapro@rocketmail.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  Invalid address field - > 45
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe",
+    "address": "999 Circus Street 999 Circus Street 999 Circus Street 999 Circus Street",
+    "phone": "9198675309",
+    "email": "moeisapro@rocketmail.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  Invalid phone field - missing field
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe",
+    "address": "999 Circus Street",
+    "email": "moeisapro@rocketmail.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  Invalid phone field - empty field
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe",
+    "address": "999 Circus Street",
+    "phone": "",
+    "email": "moeisapro@rocketmail.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  Invalid phone field - !10
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe",
+    "address": "999 Circus Street",
+    "phone": "919867530",
+    "email": "moeisapro@rocketmail.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  Invalid email field - missing field
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe",
+    "address": "999 Circus Street",
+    "phone": "9198675309",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 9,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  Invalid email field - empty field
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe",
+    "address": "999 Circus Street",
+    "phone": "9198675309",
+    "email": "",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  Invalid email field - contains " "
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe",
+    "address": "999 Circus Street",
+    "phone": "9198675309",
+    "email": "moeis apro@rocketmail.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  Invalid email field - contains "@"
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe",
+    "address": "999 Circus Street",
+    "phone": "9198675309",
+    "email": "moeisaprorocketmail.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  Invalid email field - ends with "."
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe",
+    "address": "999 Circus Street",
+    "phone": "9198675309",
+    "email": "moeisapro@rocketmail.com.",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  Invalid ccNumber field - missing field
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe",
+    "address": "999 Circus Street",
+    "phone": "9198675309",
+    "email": "moeisapro@rocketmail.com",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  Invalid ccNumber field - empty field
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe",
+    "address": "999 Circus Street",
+    "phone": "9198675309",
+    "email": "moeisapro@rocketmail.com",
+    "ccNumber": "",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  Invalid ccNumber field - < 14
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe",
+    "address": "999 Circus Street",
+    "phone": "9198675309",
+    "email": "moeisapro@rocketmail.com",
+    "ccNumber": "4444333322221",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  Invalid ccNumber field - > 16
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe",
+    "address": "999 Circus Street",
+    "phone": "9198675309",
+    "email": "moeisapro@rocketmail.com",
+    "ccNumber": "44443333222211110",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  Invalid expiry date - previous month
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe",
+    "address": "999 Circus Street",
+    "phone": "9198675309",
+    "email": "moeisapro@rocketmail.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 6,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  Invalid expiry date - previous year
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe",
+    "address": "999 Circus Street",
+    "phone": "9198675309",
+    "email": "moeisapro@rocketmail.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2022
+  }
+}
+
+###  customerForm test - at least one item
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 0
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe",
+    "address": "999 Circus Street",
+    "phone": "9198675309",
+    "email": "moeisapro@rocketmail.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  customerForm test - quantity between 1 and 99
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 100
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe",
+    "address": "999 Circus Street",
+    "phone": "9198675309",
+    "email": "moeisapro@rocketmail.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  customerForm test - Invalid category
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 2175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1001
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe",
+    "address": "999 Circus Street",
+    "phone": "9198675309",
+    "email": "moeisapro@rocketmail.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  customerForm test - Invalid price
+
+POST http://localhost:8080/ShaeBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Origin: http://localhost:5173
+Pragma: no-cache
+Referer: http://localhost:5173/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+sec-ch-ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1057,
+          "title": "Pageboy: A Memoir",
+          "author": "Elliot Page",
+          "description": "",
+          "price": 175,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1008
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Moe Shmoe",
+    "address": "999 Circus Street",
+    "phone": "9198675309",
+    "email": "moeisapro@rocketmail.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": 2023
+  }
+}
+
+###  END OF TESTS
