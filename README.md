@@ -96,7 +96,7 @@ Flickr's API onto an interactive map.
 map sharing one Activity-scoped `ViewModel` around a single live dataset.
 
 <div align="center">
-<img src="./CS5254/cs5254-dreamcatcher-screenshot.png" width="380"> <img src="./CS5254/cs5254-fancygallery-map-screenshot.png" width="380">
+<img src="./CS5254/P2C/p2c-screenshot.png" width="380"> <img src="./CS5254/P3/p3-map-screenshot.png" width="380">
 </div>
 
 *DreamCatcher's full-CRUD dream journal with camera attachment (P2C) · FancyGallery's live Flickr feed on an interactive OSMDroid map (P3)*
@@ -142,7 +142,7 @@ thousands of real query records to surface the kind of volume anomaly that flags
 beaconing or tunneling in real SOC triage.
 
 <div align="center">
-<img src="./ECE5480/ece5480-dns-log-analysis-screenshot.png" width="380"> <img src="./ECE5480/ece5480-xss-worm-screenshot.png" width="380">
+<img src="./ECE5480/ece5480-dns-log-analysis-screenshot.png" width="380"> <img src="./ECE5480/P5/task4-worm-attack-success.png" width="380">
 </div>
 
 *DNS log analysis surfacing top clients/domains across tens of thousands of records (P3) · The self-propagating XSS worm live in the SEED Labs Elgg environment (P5)*
