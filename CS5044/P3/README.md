@@ -13,6 +13,9 @@
 An AI that plays Tetris by evaluating every possible placement of a falling piece and
 selecting the one that minimizes a weighted cost function based on board quality metrics.
 
+<div align="center"><img src="TetrisAI.jpg" width="800"></div>
+<div align="center"><img src="TetrisAITest.jpg" width="800"></div>
+
 ## 🎯 Why It Matters
 
 First project with formal JUnit tests and tuning against a numeric benchmark (average
