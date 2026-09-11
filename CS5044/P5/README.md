@@ -14,6 +14,11 @@ A Swing-based graphical front-end for the Dots and Boxes game engine from P4. Pr
 menu bar, status indicators, coordinate/direction input controls, and an interactive game
 grid.
 
+<div align="center">
+<img src="./P5/DABGame.png" width="410"> 
+<img src="./P5/DABPanel full.png" width="410">
+</div>
+
 ## 🎯 Why It Matters
 
 Validated by a course-provided JUnit suite that drives the interface through real Swing
