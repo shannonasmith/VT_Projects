@@ -142,7 +142,7 @@ thousands of real query records to surface the kind of volume anomaly that flags
 beaconing or tunneling in real SOC triage.
 
 <div align="center">
-<img src="./ECE5480/P4/attack-traffic-capture.png" width="380"> <img src="./ECE5480/P5/task4-worm-attack-success.png" width="380">
+<img src="./ECE5480/P4/attack-traffic-capture.png" width="380"> <img src="./ECE5480/P5/task3cookie-exfiltration-capture.png" width="380">
 </div>
 
 *DNS log analysis surfacing top clients/domains across tens of thousands of records (P3) · The self-propagating XSS worm live in the SEED Labs Elgg environment (P5)*
