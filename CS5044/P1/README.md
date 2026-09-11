@@ -15,6 +15,8 @@ location, passenger count, and energy usage. The shuttle uses energy at a normal
 short trips and a different rate for the portion of any trip beyond a configurable "short
 trip" limit.
 
+<div align="center"><img src="SBM.jpg" width="800"></div>
+
 ## 🎯 Why It Matters
 
 First project with real internal state and multiple interacting methods, verified with an
