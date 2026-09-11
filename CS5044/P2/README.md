@@ -14,6 +14,9 @@ Simulates the control logic for a minivan's automatic sliding door, including do
 open/close, lock/unlock, child-safety lock, and gear shift state - enforcing the safety
 rules that govern when each action is allowed to succeed.
 
+<div align="center"><img src="MSD.png" width="800"></div>
+<div align="center"><img src="MSDTest.jpg" width="800"></div>
+
 ## 🎯 Why It Matters
 
 Built under a deliberately restrictive constraint (no nested branches, no `&&`/`||`),
