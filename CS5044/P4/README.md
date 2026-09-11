@@ -15,7 +15,7 @@ claiming a box (and an extra turn) whenever their edge completes all four sides 
 game continues until every box is claimed, at which point the player with the most boxes
 wins.
 
-<div align="center"><img src="DABGame.jpg" width="800"></div>
+<div align="center"><img src="DABGameTest.jpg" width="800"></div>
 
 ## 🎯 Why It Matters
 
