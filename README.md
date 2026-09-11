@@ -51,7 +51,7 @@ constrained-control-flow minivan door state machine built with no nested branche
 boolean operators.
 
 <div align="center">
-<img src="./CS5044/cs5044-tetris-screenshot.png" width="380"> <img src="./CS5044/cs5044-dotsboxes-gui-screenshot.png" width="380">
+<img src="./CS5044/P3/TetrisAIGUI.png" width="380"> <img src="./CS5044/P5/DABGameGUI.png" width="380">
 </div>
 
 *The heuristic-driven Tetris AI (P3) · The Dots and Boxes Swing GUI wired on top of the fully-tested P4 engine (P5)*
