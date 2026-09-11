@@ -96,7 +96,7 @@ Flickr's API onto an interactive map.
 map sharing one Activity-scoped `ViewModel` around a single live dataset.
 
 <div align="center">
-<img src="./CS5254/P2C/p2c-screenshot.png" width="380"> <img src="./CS5254/P3/p3-map-screenshot.png" width="380">
+<img src="./CS5254/P3/p3-screenshot.png" width="380"> <img src="./CS5254/P3/p3-map-screenshot.png" width="380">
 </div>
 
 *DreamCatcher's full-CRUD dream journal with camera attachment (P2C) · FancyGallery's live Flickr feed on an interactive OSMDroid map (P3)*
